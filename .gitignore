@@ -1,0 +1,5 @@
+node_modules/
+pdfs/
+web_outputs/
+.DS_Store
+package-lock.json

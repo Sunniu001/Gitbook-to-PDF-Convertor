@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gitbook PDF Pro - Professional Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="icon">📄</span>
+                <h1>Gitbook<span>PDF</span></h1>
+            </div>
+            <p class="subtitle">Convert entire Gitbook documentation to premium PDF in seconds.</p>
+        </header>
+
+        <main>
+            <div class="input-card">
+                <div class="input-group">
+                    <input type="text" id="gitbookUrl" placeholder="Paste Gitbook URL here (e.g. docs.walken.io)" autocomplete="off">
+                    <button id="convertBtn">Convert Now</button>
+                </div>
+            </div>
+
+            <div id="statusSection" class="status-section hidden">
+                <div class="status-card">
+                    <div class="status-header">
+                        <h3 id="statusTitle">Analyzing Sitemap...</h3>
+                        <span id="percentage">0%</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div id="progressBar" class="progress-bar"></div>
+                    </div>
+                    <div id="currentUrl" class="current-url">Fetching pages...</div>
+                </div>
+
+                <div class="log-container">
+                    <div class="log-header">
+                        <h4>Conversion History</h4>
+                        <span id="pageCount">0 / 0</span>
+                    </div>
+                    <div id="logs" class="logs">
+                        <!-- Logs will appear here -->
+                    </div>
+                </div>
+
+                <div id="downloadSection" class="download-section hidden">
+                    <a id="downloadBtn" href="#" class="btn-download" target="_blank">Download Complete PDF</a>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 GitbookPDF Pro. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
